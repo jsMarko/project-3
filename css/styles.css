@@ -10,7 +10,7 @@ body {
 
 .wrapper {
    width: 100%;
-   height: 100vh;
+   height: auto;
 
    display: flex;
    flex-direction: column;
@@ -30,27 +30,26 @@ body {
 
 .main-form-container {
    width: 90%;
-   height: 100vh;
-   /* border: 2px solid red; */
+   height: auto;
 }
 
 .title-intro {
    /* h2 */
    text-align: center;
-   font-size: 1.1rem;
+   font-size: 1.2rem;
    font-weight: 900;
    margin-top: 25px;
 }
 
 .para-intro {
    text-align: center;
+   display: block;
    position: relative;
    padding: 10px 5px 45px;
    font-size: 0.8rem;
    font-weight: 300;
    color: #8f8f8f;
    border-bottom: 2px solid #000;
-   display: inline-block;
 }
 
 .para-intro:after {
@@ -74,20 +73,24 @@ legend {
    font-weight: 900;
 }
 
-label {
+.lbl-info {
    display: block;
    margin-bottom: 8px;
    color: #9d9d9d;
 }
 
-input:focus {
-   border: 2px solid #080a0b;
+.lbl-newsletter {
+   display: inline-block;
+   margin-left: 1rem;
+   margin-bottom: 15px;
+   color: #9d9d9d;
 }
 
 input[type="text"],
 input[type="email"],
 input[type="tel"],
-select {
+select,
+textarea {
    border: none;
    font-size: 1.1rem;
    height: auto;
@@ -97,5 +100,110 @@ select {
    color: #555;
    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
    margin-bottom: 30px;
-   outline: 0;
+   outline: none;
+}
+
+#zip {
+   width: 50%;
+}
+
+input:focus,
+select:focus {
+   border: 2px solid #080a0b;
+}
+
+#news {
+   border-top: 2px solid black;
+   width: 100%;
+}
+
+p.light {
+   font-size: 1rem;
+   font-weight: 300;
+   color: #8f8f8f;
+}
+
+input[type="checkbox"] {
+   display: inline;
+}
+
+#html-news {
+   margin-top: 20px;
+}
+
+#format-news {
+   margin: 20px 0;
+}
+
+textarea {
+   display: block;
+}
+
+textarea:focus {
+   border: 2px solid;
+}
+
+label.topics {
+   margin-top: 25px;
+}
+
+button {
+   padding: 20px 39px;
+   background-color: #3bac5d;
+   border-radius: 5px;
+   text-align: center;
+   font-size: 1.4rem;
+   color: #fff;
+   margin-bottom: 20px;
+   border: none;
+   width: 100%;
+}
+
+.footer-copyright {
+   text-align: center;
+}
+
+footer {
+   height: 150px;
+   width: 100%;
+}
+
+input[type="text"]::placeholder,
+input[type="email"]::placeholder {
+   text-align: right;
+}
+
+@media (min-width: 768px) {
+   .main-form-container {
+      width: 65%;
+   }
+
+   .lbl-info {
+      display: inline-block;
+      width: 30%;
+      margin-right: -4px;
+   }
+
+   input[type="text"],
+   input[type="email"],
+   input[type="tel"],
+   select {
+      width: 70%;
+   }
+
+   textarea {
+      width: 100%;
+   }
+
+   .lbl-newsletter {
+      margin-left: 0;
+   }
+
+   #zip {
+      width: ;
+   }
+
+   footer {
+      height: 300px;
+   }
 }
